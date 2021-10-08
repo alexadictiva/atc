@@ -148,7 +148,7 @@ header .menu label {
 
 .menuDropdown {
   height: 100vh;
-  background-color: var(--color4);
+  background-color: var(--white);
 }
 
 .menuItem {
@@ -160,7 +160,7 @@ header .menu label {
 }
 
 .menuLink {
-  color: var(--color2);
+  color: var(--black);
   transition: all 0.5s ease-in-out;
 }
 
