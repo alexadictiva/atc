@@ -1,26 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: "Open Sans";
+  src: url("./../fonts/OpenSans-Regular.ttf"),
+    url("./../fonts/OpenSans-Regular.woff"),
+    url("./../fonts/OpenSans-Regular.woff2");
+}
 
 :root {
   position: relative;
   font-size: 62.5%;
   scroll-behavior: smooth;
-  --fontBase: "Inter", sans-serif;
+  --fontBase: "Open Sans", sans-serif;
+  --color1: #0e345b;
+  --color2: #00aff0;
+  --color3: #eeeeee;
+
   --white: #ffffff;
   --black: #000000;
-  --bgColorPrimary: #ffffff;
-  --bgColor1: #221e1e;
-  --bgColor2: #3e4095;
-  --bgColor3: #eeeeee;
-  --bgColorCard: #373743;
+
+  --color4: #dddddd;
+
   --transparent: transparent;
-  --fontColorPrimary: var(--black);
-  --fontColorSecondary: var(--white);
+
   --overlay: rgba(0, 0, 0, 0.5);
   --overlay1: #00000083;
   --headLine1: bold 5.5rem/7rem var(--fontBase);
@@ -39,10 +45,12 @@
 body {
   font: var(--body1);
   position: relative;
-  background-color: var(--bgColorPrimary);
+  background-color: var(--white);
   overflow-x: hidden;
 }
-
+main {
+  padding-top: 60px;
+}
 .wrapperMain {
   max-width: 1366px;
   margin: auto;
@@ -52,34 +60,35 @@ img {
   max-width: 100%;
   height: auto;
 }
+ul {
+  list-style: none;
+}
 
 a {
   text-decoration: none;
 }
 
 .button {
-  color: var(--fontColorSecondary);
+  color: var(--white);
   font: var(--button);
   padding: 10px;
   outline: none;
   border-radius: 10px;
-  box-shadow: 1px 1px 4px var(--bgColor1);
+  box-shadow: 1px 1px 4px var(--color1);
 
-  border: solid var(--bgColor2) 0.5px;
-  background: var(--bgColor2);
+  border: solid var(--color2) 0.5px;
+  background: var(--color2);
 }
 .button:hover {
-  background: linear-gradient(var(--bgColorPrimary), var(--bgColor2));
+  background: linear-gradient(var(--white), var(--color2));
 }
 
 .aboutContainer,
 .servicesContainer,
 .faqsContainer,
 .whyusContainer,
-.quotesContainer,
 .instructionsContainer,
-.formContainer,
-.benefitContainer {
+.formContainer {
   padding: 40px 20px;
 }
 .title {
@@ -97,12 +106,16 @@ header {
   align-items: center;
 }
 .brand {
-  padding-left: 20px;
-  width: 20%;
+  width: 40%;
+  padding-left: 10px;
+}
+.brand a img {
+  vertical-align: bottom;
+  height: 40px;
 }
 .menu {
   height: 100%;
-  width: 80%;
+  width: 60%;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -200,22 +213,23 @@ header .menu label {
 
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   flex-direction: column;
   gap: 20px;
   background-color: var(--overlay);
   z-index: 9;
+  text-align: center;
 }
 
 .bannerDescription h1 {
   font: var(--headLine2);
-  color: var(--fontColorSecondary);
+  color: var(--white);
 }
 .bannerDescription h1 span {
   display: block;
 }
 .bannerDescription h2 {
-  color: var(--fontColorSecondary);
+  color: var(--white);
   font: var(--body2);
 }
 /*About*/
@@ -232,12 +246,12 @@ header .menu label {
 /*Services*/
 
 .cards-container {
-  background-color: var(--bgColorCard);
+  background-color: var(--color1);
   padding: 40px 0 80px;
 }
 .cards-container h2 {
   color: var(--white);
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .cards-content {
   display: flex;
@@ -248,8 +262,8 @@ header .menu label {
 .flip-container {
   background-color: transparent;
   width: 80%;
-  height: 390px;
-  border: 1px solid var(--bgColorCard);
+  height: 340px;
+  border: 1px solid var(--color1);
   perspective: 1000px;
 }
 .card {
@@ -280,17 +294,16 @@ header .menu label {
 }
 .front p,
 .back p {
-  font-size: var(--body3);
-  /*background: grey;*/
+  font: var(--body3);
 }
 .front {
-  background-color: var(--bgColorCard);
+  background-color: var(--color1);
   color: var(--white);
 }
 
 .back {
   /*padding: 0 20px;*/
-  background-color: var(--bgColorCard);
+  background-color: var(--color1);
   color: var(--white);
   transform: rotateY(180deg);
 }
@@ -330,8 +343,8 @@ header .menu label {
   width: 100%;
   height: 60px;
   outline: none;
-  color: var(--bgColorPrimary);
-  background: var(--bgColor2);
+  color: var(--white);
+  background: var(--color2);
   margin: 0;
   cursor: pointer;
   font: var(--button);
@@ -345,39 +358,58 @@ header .menu label {
 }
 /*whyus*/
 .whyusContainer {
-  background-color: var(--bgColor3);
+  background-color: var(--color3);
 }
 .cardGeneral.cardwhyus {
-  background-color: var(--bgColorPrimary);
-  color: var(--fontColorPrimary);
+  background-color: var(--white);
+  color: var(--black);
 }
 .cardwhyus {
-  box-shadow: 0 0 8px var(--bgColor1);
+  box-shadow: 0 0 8px var(--color1);
   border-radius: 10px;
 }
 .cardwhyus h3 {
   margin: 10px 0;
 }
-/*Quote*/
-.quotesContainer {
-  background-color: var(--bgColor2);
-  color: var(--fontColorSecondary);
+/*mini carousel*/
+.miniCarousel {
+  margin: 50px 0;
 }
-.quotesContainer p {
-  text-align: center;
-}
-.quotesContainer p:first-child {
-  font: var(--headLine4);
-  margin-bottom: 10px;
+.carouselContent {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
 }
 
-.quotesContainer p:last-child {
-  font: var(--body3);
+.carouselContent::-webkit-scrollbar {
+  height: 5px;
+}
+.carouselContent::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--light-grey);
+}
+
+.carouselContent::-webkit-scrollbar-thumb {
+  background-color: var(--dark-grey);
+  outline: none;
+  border-radius: 10px;
+}
+
+.imgContainer {
+  text-align: center;
+  scroll-snap-align: center;
+  margin: 0px 35px;
+  min-width: 110px;
+}
+
+.imgContainer p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.7rem;
 }
 /*contact*/
 
 .instructionsContainer {
-  background-color: var(--bgColor3);
+  background-color: var(--color3);
 }
 .instructionsContainer h2 {
   font: var(--headLine4);
@@ -405,12 +437,12 @@ header .menu label {
 }
 .formContainer {
   text-align: center;
-  background-color: var(--bgColor1);
+  background-color: var(--color1);
 }
 input,
 textarea {
-  background-color: var(--bgColorCard);
-  color: var(--bgColorPrimary);
+  background-color: var(--white);
+  color: var(--white);
   font: var(--body4);
   width: 100%;
   margin-bottom: 10px;
@@ -431,26 +463,28 @@ textarea {
 }
 /*Provider*/
 
-/*Benefit*/
-
 /*footer*/
 footer {
-  background-color: var(--bgColor1);
+  background-color: var(--color4);
 
-  color: var(--bgColorPrimary);
+  color: var(--black);
 }
 .footerBrand {
   text-align: center;
   padding: 40px 20px;
 }
 .footerBrand img {
-  width: 50%;
+  width: 20%;
 }
 .infoFooterContainer {
   padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+}
+
+.addressContainer {
+  margin: 0 auto 50px;
+}
+.rrssContainer {
+  margin: auto;
 }
 .addressContainer h3,
 .rrssContainer h3 {
@@ -460,11 +494,14 @@ footer {
 
 .itemFooter {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 .itemFooter div,
 .itemFooter div a {
   display: flex;
-  color: var(--bgColorPrimary);
+  color: var(--black);
 }
 
 .itemFooter div img {
@@ -472,7 +509,7 @@ footer {
 }
 
 .firmContainer {
-  background-color: var(--bgColorCard);
+  background-color: var(--color2);
   height: 60px;
   display: flex;
   align-items: center;
@@ -481,8 +518,11 @@ footer {
 
 /*Media*/
 @media screen and (min-width: 768px) {
-  .wrapperHeader {
-    background-position: center;
+  .brand {
+    width: 20%;
+  }
+  .menu {
+    width: 80%;
   }
   .aboutContainer {
     display: flex;
@@ -503,12 +543,6 @@ footer {
   .instructionsContainer,
   .formContainer {
     width: 50%;
-  }
-  .footerBrand img {
-    width: 50%;
-  }
-  .infoFooterContainer {
-    flex-direction: row;
   }
 
   .addressContainer,
