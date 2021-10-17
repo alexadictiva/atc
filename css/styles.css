@@ -611,4 +611,7 @@ footer {
   .quotesContainer {
     padding: 60px 40px;
   }
+  .carouselContent {
+    justify-content: center;
+  }
 }
