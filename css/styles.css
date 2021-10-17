@@ -442,7 +442,7 @@ header .menu label {
 input,
 textarea {
   background-color: var(--white);
-  color: var(--white);
+  color: var(--color1);
   font: var(--body4);
   width: 100%;
   margin-bottom: 10px;
@@ -460,6 +460,9 @@ textarea {
 }
 .submit {
   width: 50%;
+}
+#mailto {
+  visibility: hidden;
 }
 /*Provider*/
 
