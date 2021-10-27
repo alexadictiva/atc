@@ -197,6 +197,10 @@ header .menu label {
   color: var(--color1);
   margin: 20px 0;
   line-height: 5rem;
+  display: none;
+}
+.titleContainer h1 span {
+  display: block;
 }
 .btnContant {
   background-color: var(--color2);
@@ -577,10 +581,11 @@ footer {
     align-items: center;
     transition: 0.3s;
   }
-  .menuItem:hover {
+  .menuItem:hover:hover {
     background-color: var(--white);
+    box-shadow: none;
   }
-  .menuItem:hover ~ .menuLink {
+  .menuItem:hover > .menuLink {
     color: var(--color1);
   }
   .menuLink {
@@ -595,7 +600,7 @@ footer {
     width: 50%;
   }
   .titleContainer {
-    padding: 20px;
+    padding: 15px;
     align-self: center;
   }
   .titleContainer h1 {
@@ -603,6 +608,7 @@ footer {
     font-size: 5rem;
     line-height: 6rem;
     margin: 0;
+    display: block;
   }
   .btnContant {
     visibility: visible;
