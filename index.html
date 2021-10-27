@@ -24,7 +24,7 @@
       <header>
         <section class="brand">
           <a href="#">
-            <img src="./assets/img/Logo.svg" alt="Logo" />
+            <img src="./assets/img/logo.jpg" alt="Logo" />
           </a>
         </section>
         <section class="menu">
@@ -41,22 +41,22 @@
             <nav class="menuContainer">
               <ul class="menuDropdown">
                 <li class="menuItem">
-                  <a class="menuLink" href="#">HOME</a>
+                  <a class="menuLink" href="#">Home</a>
                 </li>
                 <li class="menuItem">
-                  <a class="menuLink" href="#about">ABOUT US</a>
+                  <a class="menuLink" href="#about">About us</a>
                 </li>
                 <li class="menuItem">
-                  <a class="menuLink" href="#services">SERVICES</a>
+                  <a class="menuLink" href="#services">Services</a>
                 </li>
                 <li class="menuItem">
-                  <a class="menuLink" href="#whyus">WHY US</a>
+                  <a class="menuLink" href="#whyus">Why us</a>
                 </li>
                 <li class="menuItem">
-                  <a class="menuLink" href="#faqs">FAQs</a>
+                  <a class="menuLink" href="#faqs">Faqs</a>
                 </li>
                 <li class="menuItem">
-                  <a class="menuLink" href="#contact">CONTACT US</a>
+                  <a class="menuLink" href="#contact">Contact us</a>
                 </li>
               </ul>
             </nav>
@@ -65,50 +65,92 @@
       </header>
 
       <main>
-        <section class="bannerContainer" id="banner">
-          <div
-            class="
-              swiper
-              mySwiper
-              swiper-initialized swiper-horizontal swiper-pointer-events
-            "
-          >
-            <div
-              class="swiper-wrapper"
-              id="swiper-wrapper-4394c8439eb7d512"
-              aria-live="polite"
-              style="
-                transition-duration: 0ms;
-                transform: translate3d(-960px, 0px, 0px);
-              "
-            >
-              <div class="swiper-slide" role="group" aria-label="1 / 3">
-                <img src="./assets/img/WEB-SLIDER-1.jpg" alt="Truck Image 1" />
-              </div>
-              <div class="swiper-slide" role="group" aria-label="2 / 3">
-                <img src="./assets/img/WEB-SLIDER-2.jpg" alt="Truck Image 2" />
-              </div>
-              <div class="swiper-slide" role="group" aria-label="3 / 3">
-                <img src="./assets/img/WEB-SLIDER-3.jpg" alt="Truck Image 3" />
+        <section class="bannerContainer">
+          <div class="titleContainer">
+            <h1>Transporting Logistic Moving.</h1>
+            <a href="#contact" class="btnContant">Contact Us</a>
+          </div>
+          <div class="sliderContainer">
+            <div class="bannerSlider">
+              <div
+                class="
+                  swiper
+                  mySwiper
+                  swiper-initialized swiper-horizontal swiper-pointer-events
+                "
+              >
+                <div
+                  class="swiper-wrapper"
+                  id="swiper-wrapper-4394c8439eb7d512"
+                  aria-live="polite"
+                  style="
+                    transition-duration: 0ms;
+                    transform: translate3d(-960px, 0px, 0px);
+                  "
+                >
+                  <div class="swiper-slide" role="group" aria-label="1 / 3">
+                    <picture>
+                      <source
+                        media="(max-width: 768px)"
+                        srcset="./assets/img/tablet/WEB-1-SLIDER.jpg"
+                      />
+                      <source
+                        media="(min-width: 769px)"
+                        srcset="./assets/img/desktop/WEB-1-SLIDER.jpg"
+                      />
+
+                      <img
+                        src="./assets/img/mobile/WEB-1-SLIDER.jpg"
+                        alt="Truck Image 1"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide" role="group" aria-label="2 / 3">
+                    <picture>
+                      <source
+                        media="(max-width: 768px)"
+                        srcset="./assets/img/tablet/WEB-2-SLIDER.jpg"
+                      />
+                      <source
+                        media="(min-width: 769px)"
+                        srcset="./assets/img/desktop/WEB-2-SLIDER.jpg"
+                      />
+
+                      <img
+                        src="./assets/img/mobile/WEB-2-SLIDER.jpg"
+                        alt="Truck Image 2"
+                      />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide" role="group" aria-label="3 / 3">
+                    <picture>
+                      <source
+                        media="(max-width: 768px)"
+                        srcset="./assets/img/tablet/WEB-3-SLIDER.jpg"
+                      />
+                      <source
+                        media="(min-width: 769px)"
+                        srcset="./assets/img/desktop/WEB-3-SLIDER.jpg"
+                      />
+
+                      <img
+                        src="./assets/img/mobile/WEB-3-SLIDER.jpg"
+                        alt="Truck Image 3"
+                      />
+                    </picture>
+                  </div>
+                </div>
+                <span
+                  class="swiper-notification"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                ></span>
               </div>
             </div>
-            <span
-              class="swiper-notification"
-              aria-live="assertive"
-              aria-atomic="true"
-            ></span>
-          </div>
-          <div class="bannerDescription">
-            <h1>
-              <span>Moving.</span>
-              <span>Transporting.</span>
-              <span>Logistic.</span>
-            </h1>
-            <h2>We’re a worldwide transport and logistic company</h2>
-            <a href="#form" class="button">Contact Us</a>
           </div>
         </section>
-        <section class="aboutContainer wow" id="about">
+        <hr />
+        <section class="aboutContainer" id="about">
           <div class="aboutDescription">
             <h2 class="title">About Us</h2>
             <p>
@@ -120,17 +162,43 @@
             </p>
           </div>
           <div class="aboutImg">
-            <img src="./assets/img/ABOUT-US.jpg" alt="About Us Image" />
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="./assets/img/tablet/ABOUT-US.jpg"
+              />
+              <source
+                media="(min-width: 769px)"
+                srcset="./assets/img/desktop/ABOUT-US.jpg"
+              />
+
+              <img
+                src="./assets/img/mobile/ABOUT-US.jpg"
+                alt="A man in a Truck"
+              />
+            </picture>
           </div>
         </section>
-
+        <hr />
         <section class="cards-container wow" id="services">
           <h2 class="title">Services</h2>
           <div class="cards-content">
             <div class="flip-container">
               <div class="card">
                 <div class="front">
-                  <img src="./assets/img/service-1.jpg" alt="Card1" />
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="./assets/img/tablet/service-1.jpg"
+                    />
+                    <source
+                      media="(min-width: 769px)"
+                      srcset="./assets/img/desktop/service-1.jpg"
+                    />
+
+                    <img src="./assets/img/mobile/service-1.jpg" alt="Card1" />
+                  </picture>
+
                   <h3>The 2020 Challenge</h3>
                 </div>
                 <div class="back">
@@ -149,7 +217,19 @@
             <div class="flip-container">
               <div class="card">
                 <div class="front">
-                  <img src="./assets/img/service-2.jpg" alt="Card1" />
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="./assets/img/tablet/service-2.jpg"
+                    />
+                    <source
+                      media="(min-width: 769px)"
+                      srcset="./assets/img/desktop/service-2.jpg"
+                    />
+
+                    <img src="./assets/img/mobile/service-2.jpg" alt="Card2" />
+                  </picture>
+
                   <h3>Our Solutions</h3>
                 </div>
                 <div class="back">
@@ -169,7 +249,19 @@
             <div class="flip-container">
               <div class="card">
                 <div class="front">
-                  <img src="./assets/img/service-3.jpg" alt="Card1" />
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="./assets/img/tablet/service-3.jpg"
+                    />
+                    <source
+                      media="(min-width: 769px)"
+                      srcset="./assets/img/desktop/service-3.jpg"
+                    />
+
+                    <img src="./assets/img/mobile/service-3.jpg" alt="Card 3" />
+                  </picture>
+
                   <h3>Improve Your Rol</h3>
                 </div>
                 <div class="back">
@@ -365,7 +457,7 @@
       </main>
       <footer class="wow">
         <div class="footerBrand">
-          <img src="./assets/img/Logo.svg" alt="Logo" />
+          <img src="./assets/img/logo.jpg" alt="Logo" />
         </div>
         <section class="infoFooterContainer">
           <div class="addressContainer">

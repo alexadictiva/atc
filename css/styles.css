@@ -55,7 +55,11 @@ main {
   max-width: 1366px;
   margin: auto;
 }
-
+hr {
+  width: 50%;
+  margin: 50px auto;
+  border: var(--color1) 1px solid;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -83,7 +87,6 @@ a {
   background: linear-gradient(var(--white), var(--color2));
 }
 
-.aboutContainer,
 .servicesContainer,
 .faqsContainer,
 .whyusContainer,
@@ -107,11 +110,10 @@ header {
 }
 .brand {
   width: 40%;
-  padding-left: 10px;
 }
 .brand a img {
   vertical-align: bottom;
-  height: 40px;
+  height: 100%;
 }
 .menu {
   height: 100%;
@@ -182,13 +184,36 @@ header .menu label {
 
 /*Banner*/
 .bannerContainer {
-  position: relative;
-  height: 70vh;
+  display: flex;
+  flex-direction: column;
 }
-
+.titleContainer {
+  order: 2;
+  position: relative;
+}
+.titleContainer h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: var(--color1);
+  margin: 20px 0;
+  line-height: 5rem;
+}
+.btnContant {
+  background-color: var(--color2);
+  color: var(--white);
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -40px;
+  right: 15%;
+  visibility: hidden;
+}
+.sliderContainer {
+  order: 1;
+}
 .swiper {
   width: 100%;
-  height: 70vh;
 }
 
 .swiper-slide {
@@ -203,46 +228,17 @@ header .menu label {
   height: 100%;
   object-fit: cover;
 }
-
-.bannerDescription {
-  padding: 0 20px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  background-color: var(--overlay);
-  z-index: 9;
-  text-align: center;
-}
-
-.bannerDescription h1 {
-  font: var(--headLine2);
-  color: var(--white);
-}
-.bannerDescription h1 span {
-  display: block;
-}
-.bannerDescription h2 {
-  color: var(--white);
-  font: var(--body2);
-}
 /*About*/
-
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
 .aboutDescription p {
   margin-bottom: 30px;
   text-align: center;
 }
-.aboutImg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 /*Services*/
 
 .cards-container {
@@ -512,7 +508,8 @@ footer {
 }
 
 .firmContainer {
-  background-color: var(--color2);
+  background-color: var(--color1);
+  color: var(--white);
   height: 60px;
   display: flex;
   align-items: center;
@@ -527,15 +524,7 @@ footer {
   .menu {
     width: 80%;
   }
-  .aboutContainer {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .aboutDescription p {
-    font-size: 2.9rem;
-    line-height: 3.9rem;
-  }
+
   .front img {
     width: 70%;
   }
@@ -557,6 +546,7 @@ footer {
 @media screen and (min-width: 1024px) {
   header {
     max-width: 1366px;
+    background-color: var(--color1);
   }
   .menu label {
     display: none;
@@ -568,7 +558,7 @@ footer {
   }
 
   .menuDropdown {
-    background-color: var(--white);
+    background-color: var(--color1);
     padding-right: 15px;
     display: flex;
     justify-content: flex-end;
@@ -585,13 +575,51 @@ footer {
     line-height: 2rem;
     display: flex;
     align-items: center;
+    transition: 0.3s;
   }
   .menuItem:hover {
-    box-shadow: 100% 0 0 #ffffff inset;
+    background-color: var(--white);
   }
-
-  .aboutContainer div {
+  .menuItem:hover ~ .menuLink {
+    color: var(--color1);
+  }
+  .menuLink {
+    color: var(--white);
+  }
+  .bannerContainer {
+    margin: 50px 0;
+    flex-direction: row;
+  }
+  .titleContainer,
+  .sliderContainer {
     width: 50%;
+  }
+  .titleContainer {
+    padding: 20px;
+    align-self: center;
+  }
+  .titleContainer h1 {
+    text-align: left;
+    font-size: 5rem;
+    line-height: 6rem;
+    margin: 0;
+  }
+  .btnContant {
+    visibility: visible;
+  }
+  .aboutContainer {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 20px;
+  }
+  .aboutDescription,
+  .aboutImg {
+    width: 50%;
+  }
+  .aboutDescription p {
+    font-size: 2.5rem;
+    line-height: 3.4rem;
   }
   .cards-content {
     flex-direction: row;
